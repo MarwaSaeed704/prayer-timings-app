@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@400;700;900&display=swap');
+
+html{
+  direction: rtl;
+  font-family: "IBM Plex Sans Arabic", serif !important;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
