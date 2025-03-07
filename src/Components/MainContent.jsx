@@ -1,4 +1,9 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import fajer from '../assets/images/fajer.png'
+import dohur from '../assets/images/dohur.png'
+import aser from '../assets/images/aser.png'
+import magherb from '../assets/images/magherb.png'
+import isha from '../assets/images/isha.png'
 import Grid from '@mui/material/Grid2';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
@@ -11,6 +16,7 @@ import axios from 'axios';
 import moment from 'moment';
 import 'moment/dist/locale/ar-ma';
 moment.locale("ar");
+
 
 
 
@@ -154,8 +160,10 @@ export default function MainContent() {
 
   return (
     <>
-      {/* top row */}
-       <Grid container spacing={{xs:2,sm:4,md:12}}>
+      <div className=''>
+
+         {/* top row */}
+       <Grid  container spacing={{xs:2,sm:4,md:12}}>
         <Grid  size={6}>
           <div>
             <h2>  {today} </h2>
@@ -179,27 +187,29 @@ export default function MainContent() {
         <Prayer
           name="الفجر"
           time={timings.Fajr}
-          image="https://export-download.canva.com/hztv8/DAGbx_hztv8/3/0/0001-8963741913518188570.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20250109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250109T111518Z&X-Amz-Expires=76488&X-Amz-Signature=26aed133c454c1dc35002dbb0b68f8d7a4a28ad8dc00a5366d760e6cb43ba7ca&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2010%20Jan%202025%2008%3A30%3A06%20GMT"
+          image={fajer}
+          
         />
+
         <Prayer
           name="الظهر"
           time={timings.Dhuhr}
-          image="https://export-download.canva.com/hztv8/DAGbx_hztv8/5/0/0001-969852574715530846.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20250109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250109T205818Z&X-Amz-Expires=42467&X-Amz-Signature=aaa6e76a0c6c717d7bc7929cc11496b4b6183caf7e2c7643dd3068bd98ef5e5c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2010%20Jan%202025%2008%3A46%3A05%20GMT"
+          image={dohur}
         />
         <Prayer
           name="العصر"
           time={timings.Asr}
-          image="https://export-download.canva.com/hztv8/DAGbx_hztv8/7/0/0001-4515311384451299042.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20250109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250109T200501Z&X-Amz-Expires=46780&X-Amz-Signature=99d71694e79c18aee4564578ab8123b3dfd8c6acd89d3b13740234da4640df2d&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2010%20Jan%202025%2009%3A04%3A41%20GMT"
-        />
+          image={aser}
+          />
         <Prayer
           name="المغرب"
           time={timings.Maghrib}
-          image="https://export-download.canva.com/hztv8/DAGbx_hztv8/10/0/0001-310075230091502177.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20250109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250109T092945Z&X-Amz-Expires=85343&X-Amz-Signature=076b891a0792501aa88a26f2d7699dca4a1ab73f73b19a904ca7e222a121bb4d&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2010%20Jan%202025%2009%3A12%3A08%20GMT"
+          image={magherb}
         />
         <Prayer
           name="العشاء"
           time={timings.Isha}
-          image="https://export-download.canva.com/hztv8/DAGbx_hztv8/12/0/0001-1162381458971422786.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20250110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250110T015058Z&X-Amz-Expires=23795&X-Amz-Signature=ca3f3ced7446645ae6fc3d2d892e59c9917498cb92b0df6a2d28b032df1a96bf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2010%20Jan%202025%2008%3A27%3A33%20GMT"
+          image={isha}
         />
        
       </Stack>
@@ -226,6 +236,9 @@ export default function MainContent() {
       </FormControl>
       </Stack>
        {/*== select city ==*/}
+
+      </div>
+     
 
     
 

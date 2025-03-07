@@ -1,0 +1,8 @@
+.bg-container{
+    height: 150vh;
+    background-image: url("../src/assets/images/sky.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}

@@ -1,5 +1,6 @@
 
 import './App.css'
+import './style.css'
 import MainContent from './Components/MainContent';
 import Container from '@mui/material/Container';
 
